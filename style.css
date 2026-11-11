@@ -1,4 +1,4 @@
-/* Styling for Huokaing Thara FC Home & Announcements Page */
+/* Styling for Huokaing Thara FC Announcements Page */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
     margin: auto;
 }
 
-/* Header & Navigation */
+/* Header Navigation */
 header {
     background: #090d16;
     color: #fff;
@@ -72,160 +72,103 @@ header {
     transform: scale(1.05);
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(9, 13, 22, 0.85), rgba(9, 13, 22, 0.95)), 
-                url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+/* Page Title Banner */
+.page-title {
+    background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
     text-align: center;
-    padding: 5rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .badge {
     display: inline-block;
     background: rgba(0, 242, 254, 0.15);
     color: #00f2fe;
-    padding: 5px 15px;
+    padding: 4px 14px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: bold;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     border: 1px solid rgba(0, 242, 254, 0.3);
 }
 
-.hero-content h2 {
-    font-size: 2.5rem;
+.page-title h2 {
+    font-size: 2.2rem;
     color: #f8fafc;
-    margin-bottom: 0.8rem;
-    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 .motto-text {
-    font-size: 1.25rem;
     color: #00f2fe;
     font-style: italic;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
-}
-
-.btn-primary {
-    background: #00f2fe;
-    color: #090d16;
-}
-
-.btn-primary:hover {
-    background: #00c6ff;
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: #e2e8f0;
-    border: 2px solid #334155;
-}
-
-.btn-secondary:hover {
-    border-color: #00f2fe;
-    color: #00f2fe;
-}
-
-/* Sections */
+/* Section */
 .section {
     padding: 3.5rem 0;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-    color: #00f2fe;
+/* News Cards Layout */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
 }
 
-.text-center {
-    text-align: center;
-}
-
-/* Announcement Feed */
-.announcement-feed {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-}
-
-.announcement-card {
+.news-card {
     background: #1e293b;
     padding: 2rem;
     border-radius: 12px;
-    border-left: 5px solid #00f2fe;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-right: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.3s, border-color 0.3s;
 }
 
-.announcement-card.featured {
-    border-left-color: #ffcc00;
-    background: linear-gradient(145deg, #1e293b 0%, #090d16 100%);
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 242, 254, 0.4);
 }
 
-.announcement-header {
+.featured-card {
+    border: 2px solid #00f2fe;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
+}
+
+.news-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.announcement-badge {
-    color: #00f2fe;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-.featured .announcement-badge {
-    color: #ffcc00;
-}
-
-.announcement-date {
-    color: #94a3b8;
+.news-tag {
     font-size: 0.85rem;
+    font-weight: bold;
+    color: #00f2fe;
+    background: rgba(0, 242, 254, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
 }
 
-.announcement-card h3 {
-    color: #f8fafc;
+.news-tag.urgent {
+    color: #ff4757;
+    background: rgba(255, 71, 87, 0.15);
+}
+
+.news-date {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.news-card h3 {
     font-size: 1.3rem;
+    color: #f8fafc;
     margin-bottom: 0.8rem;
 }
 
-.announcement-body p {
-    color: #cbd5e1;
-    font-size: 0.95rem;
-}
-
-/* Recruitment Section */
-.recruitment-section {
-    background: #090d16;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.recruitment-desc {
-    max-width: 650px;
-    margin: -1.5rem auto 1.5rem auto;
+.news-card p {
     color: #94a3b8;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
 }
 
 /* Footer */
